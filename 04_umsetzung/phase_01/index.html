@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KORODUR | Mineralische Industrieböden & Hartstoffe seit 1936</title>
+<meta name="description" content="KORODUR: Mineralische Industrieböden, Hartstoffe und Spezialbaustoffe seit 1936. 750 Mio. m² verlegt weltweit. Jetzt Beratung anfragen.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400;700;800;900&display=swap" rel="stylesheet">
+<style>
+/* ========== RESET & VARIABLES ========== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --primary: #002d59;
+  --secondary: #009ee3;
+  --cta: #009ee3;
+  --cta-hover: #007bb5;
+  --light-gray: #ececed;
+  --mid-gray: #d9dada;
+  --white: #ffffff;
+  --muted: #5a6a7a;
+  --max-w: 1200px;
+  --section-pad-d: 80px;
+  --section-pad-m: 48px;
+  --radius: 8px;
+  --card-radius: 12px;
+  --shadow: 0 2px 12px rgba(0,45,89,.08);
+  --shadow-hover: 0 8px 24px rgba(0,45,89,.14);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Gabarito', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--primary);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ========== TYPOGRAPHY ========== */
+h1, h2, h3, h4 { line-height: 1.15; }
+h1 { font-weight: 900; font-size: clamp(2rem, 5vw, 3.2rem); text-transform: uppercase; }
+h2 { font-weight: 900; font-size: clamp(1.6rem, 3.5vw, 2.4rem); text-transform: uppercase; }
+h3 { font-weight: 700; font-size: clamp(1.1rem, 2vw, 1.4rem); }
+.subline { font-weight: 800; text-transform: uppercase; }
+
+/* ========== BUTTONS ========== */
+.btn {
+  display: inline-block;
+  padding: 16px 32px;
+  border-radius: var(--radius);
+  border: 2px solid transparent;
+  font-family: 'Gabarito', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all .25s ease;
+  text-align: center;
+}
+.btn-primary {
+  background: var(--cta);
+  color: var(--white);
+  border-color: var(--cta);
+}
+.btn-primary:hover {
+  background: var(--cta-hover);
+  border-color: var(--cta-hover);
+  transform: translateY(-1px);
+}
+.btn-ghost {
+  background: transparent;
+  color: var(--cta);
+  border-color: var(--cta);
+}
+.btn-ghost:hover {
+  background: var(--cta);
+  color: var(--white);
+  transform: translateY(-1px);
+}
+.btn:focus-visible {
+  outline: 3px solid var(--cta);
+  outline-offset: 2px;
+}
+
+/* ========== HEADER ========== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--white);
+  border-bottom: 1px solid var(--mid-gray);
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+.logo {
+  font-weight: 900;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  color: var(--primary);
+  letter-spacing: 2px;
+  flex-shrink: 0;
+}
+.logo span { color: var(--cta); }
+
+/* Desktop Nav */
+.main-nav { display: flex; align-items: center; gap: 0; }
+.main-nav > li { position: relative; }
+.main-nav > li > a {
+  display: block;
+  padding: 24px 14px;
+  font-weight: 700;
+  font-size: .9rem;
+  transition: color .2s;
+  white-space: nowrap;
+}
+.main-nav > li > a:hover,
+.main-nav > li > a:focus { color: var(--cta); }
+
+/* Mega Menu */
+.mega-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 320px;
+  background: var(--white);
+  border-radius: 0 0 var(--card-radius) var(--card-radius);
+  box-shadow: var(--shadow-hover);
+  padding: 24px;
+  z-index: 100;
+}
+.main-nav > li:hover .mega-menu { display: block; }
+.mega-menu a {
+  display: block;
+  padding: 6px 0;
+  font-weight: 400;
+  font-size: .9rem;
+  color: var(--primary);
+  transition: color .2s;
+}
+.mega-menu a:hover { color: var(--cta); }
+.mega-menu h4 {
+  font-weight: 800;
+  font-size: .8rem;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+/* Header utilities */
+.header-utils {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+}
+.search-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: var(--primary);
+  padding: 4px;
+}
+.lang-switch {
+  position: relative;
+  font-weight: 700;
+  font-size: .85rem;
+  cursor: pointer;
+}
+.lang-switch select {
+  appearance: none;
+  background: none;
+  border: 1px solid var(--mid-gray);
+  border-radius: 4px;
+  padding: 4px 24px 4px 8px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: .85rem;
+  color: var(--primary);
+  cursor: pointer;
+}
+.header-phone {
+  font-weight: 700;
+  font-size: .85rem;
+  color: var(--primary);
+  white-space: nowrap;
+}
+.header-phone:hover { color: var(--cta); }
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  flex-direction: column;
+  gap: 5px;
+}
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--primary);
+  transition: all .3s;
+}
+
+/* Mobile Nav */
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: 72px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--white);
+  z-index: 999;
+  overflow-y: auto;
+  padding: 24px;
+}
+.mobile-nav.active { display: block; }
+.mobile-nav a {
+  display: block;
+  padding: 14px 0;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-bottom: 1px solid var(--light-gray);
+}
+.mobile-nav a:hover { color: var(--cta); }
+.mobile-nav-utils {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 2px solid var(--light-gray);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+@media (max-width: 1024px) {
+  .main-nav, .header-utils { display: none; }
+  .hamburger { display: flex; }
+}
+
+/* ========== HERO ========== */
+.hero {
+  background: linear-gradient(135deg, var(--light-gray) 0%, var(--white) 100%);
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 40px,
+    rgba(0,45,89,.02) 40px,
+    rgba(0,45,89,.02) 80px
+  );
+  pointer-events: none;
+}
+.hero-inner {
+  padding: 100px 0 80px;
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+}
+.hero h1 {
+  margin-bottom: 20px;
+  color: var(--primary);
+}
+.hero .hero-sub {
+  font-size: 1.15rem;
+  color: var(--muted);
+  margin-bottom: 36px;
+  max-width: 600px;
+  line-height: 1.7;
+}
+.hero-ctas {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+  .hero-inner { padding: 60px 0 48px; }
+  .hero-ctas .btn { width: 100%; }
+}
+
+/* ========== SECTION BASE ========== */
+.section {
+  padding: var(--section-pad-d) 0;
+}
+.section-gray { background: var(--light-gray); }
+.section-dark { background: var(--primary); color: var(--white); }
+.section-title {
+  text-align: center;
+  margin-bottom: 48px;
+}
+.section-title h2 { margin-bottom: 12px; }
+.section-title p { color: var(--muted); font-size: 1.05rem; max-width: 640px; margin: 0 auto; }
+.section-dark .section-title p { color: rgba(255,255,255,.7); }
+
+@media (max-width: 768px) {
+  .section { padding: var(--section-pad-m) 0; }
+}
+
+/* ========== ZIELGRUPPEN KACHELN ========== */
+.zielgruppen-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.zg-card {
+  background: var(--white);
+  border-radius: var(--card-radius);
+  box-shadow: var(--shadow);
+  padding: 36px 28px;
+  transition: all .3s ease;
+  display: flex;
+  flex-direction: column;
+}
+.zg-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+.zg-icon {
+  font-size: 2.4rem;
+  margin-bottom: 16px;
+}
+.zg-card h3 { margin-bottom: 16px; color: var(--primary); }
+.zg-card ul {
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+.zg-card li {
+  padding: 4px 0;
+  font-size: .95rem;
+  color: var(--muted);
+  position: relative;
+  padding-left: 16px;
+}
+.zg-card li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 12px;
+  width: 6px;
+  height: 6px;
+  background: var(--cta);
+  border-radius: 50%;
+}
+.zg-link {
+  font-weight: 700;
+  color: var(--cta);
+  transition: color .2s;
+}
+.zg-link:hover { color: var(--cta-hover); }
+@media (max-width: 768px) {
+  .zielgruppen-grid { grid-template-columns: 1fr; }
+}
+
+/* ========== PRODUKT KACHELN ========== */
+.produkt-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.produkt-card {
+  background: var(--white);
+  border-radius: var(--card-radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: all .3s ease;
+}
+.produkt-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+.produkt-img {
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .85rem;
+  font-weight: 700;
+  color: rgba(255,255,255,.7);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.produkt-img-1 { background: linear-gradient(135deg, #1a3f6f, #002d59); }
+.produkt-img-2 { background: linear-gradient(135deg, #2c5f8a, #1a3f6f); }
+.produkt-img-3 { background: linear-gradient(135deg, #009ee3, #0078ad); }
+.produkt-img-4 { background: linear-gradient(135deg, #e85d26, #c4421a); }
+.produkt-img-5 { background: linear-gradient(135deg, #3a7bc8, #002d59); }
+.produkt-img-6 { background: linear-gradient(135deg, #5a6a7a, #3a4a5a); }
+.produkt-img-7 { background: linear-gradient(135deg, #00b4d8, #009ee3); }
+.produkt-img-8 { background: linear-gradient(135deg, #8aba56, #5a8a2f); }
+.produkt-body {
+  padding: 20px;
+}
+.produkt-body h3 {
+  font-size: 1.05rem;
+  margin-bottom: 6px;
+}
+.produkt-body p {
+  font-size: .88rem;
+  color: var(--muted);
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+.produkt-link {
+  font-weight: 700;
+  font-size: .9rem;
+  color: var(--cta);
+  transition: color .2s;
+}
+.produkt-link:hover { color: var(--cta-hover); }
+
+@media (max-width: 1024px) {
+  .produkt-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .produkt-grid { grid-template-columns: 1fr; }
+}
+
+/* ========== USP / TRUST BAR ========== */
+.usp-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  text-align: center;
+}
+.usp-item {}
+.usp-number {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 900;
+  color: var(--cta);
+  line-height: 1.2;
+}
+.usp-label {
+  font-size: .95rem;
+  color: rgba(255,255,255,.85);
+  margin-top: 4px;
+}
+@media (max-width: 768px) {
+  .usp-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+}
+@media (max-width: 480px) {
+  .usp-grid { grid-template-columns: 1fr; }
+}
+
+/* ========== REFERENZ KACHELN ========== */
+.referenz-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 36px;
+}
+.referenz-card {
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  position: relative;
+  height: 280px;
+  transition: all .3s ease;
+  cursor: pointer;
+}
+.referenz-card:hover { transform: translateY(-4px); }
+.referenz-bg {
+  position: absolute;
+  inset: 0;
+}
+.ref-bg-1 { background: linear-gradient(135deg, #1a3f6f 0%, #003366 50%, #001a33 100%); }
+.ref-bg-2 { background: linear-gradient(135deg, #2c5f8a 0%, #1a4f7a 50%, #002d59 100%); }
+.ref-bg-3 { background: linear-gradient(135deg, #0078ad 0%, #005580 50%, #003355 100%); }
+.referenz-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px;
+  background: linear-gradient(to top, rgba(0,45,89,.9) 0%, transparent 100%);
+  color: var(--white);
+}
+.referenz-overlay h3 { font-size: 1.1rem; margin-bottom: 4px; }
+.referenz-meta { font-size: .85rem; color: rgba(255,255,255,.7); }
+.referenz-cta { text-align: center; }
+
+@media (max-width: 768px) {
+  .referenz-grid { grid-template-columns: 1fr; }
+  .referenz-card { height: 220px; }
+}
+
+/* ========== NEWS ========== */
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 36px;
+}
+.news-card {
+  background: var(--white);
+  border-radius: var(--card-radius);
+  box-shadow: var(--shadow);
+  padding: 28px 24px;
+  transition: all .3s ease;
+}
+.news-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+.news-date {
+  font-size: .8rem;
+  font-weight: 700;
+  color: var(--cta);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+.news-card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+}
+.news-card p {
+  font-size: .9rem;
+  color: var(--muted);
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+.news-link {
+  font-weight: 700;
+  font-size: .9rem;
+  color: var(--cta);
+  transition: color .2s;
+}
+.news-link:hover { color: var(--cta-hover); }
+.news-cta { text-align: center; }
+
+@media (max-width: 768px) {
+  .news-grid { grid-template-columns: 1fr; }
+}
+
+/* ========== KONTAKT CTA LEISTE ========== */
+.kontakt-cta {
+  text-align: center;
+}
+.kontakt-cta h2 { margin-bottom: 32px; }
+.kontakt-cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+  .kontakt-cta-buttons .btn { width: 100%; }
+}
+
+/* ========== FOOTER ========== */
+.site-footer {
+  background: var(--primary);
+  color: var(--white);
+  padding: 60px 0 0;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  margin-bottom: 40px;
+}
+.footer-col h4 {
+  font-weight: 800;
+  font-size: .8rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 16px;
+  color: var(--cta);
+}
+.footer-col a {
+  display: block;
+  padding: 4px 0;
+  font-size: .9rem;
+  color: rgba(255,255,255,.75);
+  transition: color .2s;
+}
+.footer-col a:hover { color: var(--white); }
+
+.newsletter-row {
+  border-top: 1px solid rgba(255,255,255,.15);
+  padding: 28px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.newsletter-form {
+  display: flex;
+  gap: 0;
+  max-width: 400px;
+  flex-grow: 1;
+}
+.newsletter-form input {
+  flex-grow: 1;
+  padding: 12px 16px;
+  border: 2px solid rgba(255,255,255,.2);
+  border-right: none;
+  border-radius: var(--radius) 0 0 var(--radius);
+  background: rgba(255,255,255,.05);
+  color: var(--white);
+  font-family: inherit;
+  font-size: .9rem;
+}
+.newsletter-form input::placeholder { color: rgba(255,255,255,.4); }
+.newsletter-form button {
+  padding: 12px 24px;
+  border: 2px solid var(--cta);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  background: var(--cta);
+  color: var(--white);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: .9rem;
+  cursor: pointer;
+  transition: background .2s;
+  white-space: nowrap;
+}
+.newsletter-form button:hover { background: var(--cta-hover); }
+.social-links { display: flex; gap: 16px; }
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.1);
+  color: var(--white);
+  font-size: 1.1rem;
+  transition: background .2s;
+}
+.social-links a:hover { background: var(--cta); }
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,.15);
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: .8rem;
+  color: rgba(255,255,255,.5);
+}
+.footer-bottom-links {
+  display: flex;
+  gap: 20px;
+}
+.footer-bottom-links a { color: rgba(255,255,255,.5); font-size: .8rem; }
+.footer-bottom-links a:hover { color: var(--white); }
+.iso-badge {
+  background: rgba(255,255,255,.1);
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: .75rem;
+  color: rgba(255,255,255,.7);
+}
+
+@media (max-width: 768px) {
+  .footer-grid { grid-template-columns: repeat(2, 1fr); }
+  .newsletter-row { flex-direction: column; align-items: flex-start; }
+  .newsletter-form { max-width: 100%; width: 100%; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+  .footer-bottom-links { flex-wrap: wrap; justify-content: center; }
+}
+
+/* ========== MOBILE STICKY CTA BAR ========== */
+.mobile-cta-bar {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--white);
+  box-shadow: 0 -2px 12px rgba(0,45,89,.12);
+  z-index: 998;
+  padding: 10px 16px;
+}
+.mobile-cta-bar-inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+.mobile-cta-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 8px;
+  background: var(--cta);
+  color: var(--white);
+  border-radius: var(--radius);
+  font-weight: 700;
+  font-size: .8rem;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background .2s;
+}
+.mobile-cta-btn:hover { background: var(--cta-hover); }
+
+@media (max-width: 768px) {
+  .mobile-cta-bar { display: block; }
+  body { padding-bottom: 70px; }
+}
+
+/* ========== ANIMATIONS ========== */
+@media (prefers-reduced-motion: no-preference) {
+  .zg-card, .produkt-card, .referenz-card, .news-card {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity .5s ease, transform .5s ease, box-shadow .3s ease;
+  }
+  .zg-card.visible, .produkt-card.visible, .referenz-card.visible, .news-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .zg-card.visible:hover, .produkt-card.visible:hover, .referenz-card.visible:hover, .news-card.visible:hover {
+    transform: translateY(-4px);
+  }
+}
+
+/* Hamburger active state */
+.hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+</style>
+</head>
+<body>
+
+<!-- ==================== HEADER ==================== -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="#" class="logo">KORODUR<span>.</span></a>
+
+    <ul class="main-nav" role="navigation" aria-label="Hauptnavigation">
+      <li>
+        <a href="#produkte">Produkte</a>
+        <div class="mega-menu">
+          <h4>Produktgruppen</h4>
+          <a href="#">Industrieboden</a>
+          <a href="#">Sichtestrich</a>
+          <a href="#">MICROTOP</a>
+          <a href="#">Rapid Set</a>
+          <a href="#">Schnellbetonsysteme</a>
+          <a href="#">Spezialbaustoffe</a>
+          <a href="#">3D Concrete Printing</a>
+          <a href="#">Katzenstreu</a>
+        </div>
+      </li>
+      <li>
+        <a href="#produkte">Anwendungen</a>
+        <div class="mega-menu">
+          <h4>Nach Branche</h4>
+          <a href="#">Logistik & Distribution</a>
+          <a href="#">Automotive & Produktion</a>
+          <a href="#">Lebensmittel & Pharma</a>
+          <a href="#">Handel & Retail</a>
+          <a href="#">Trinkwasser</a>
+          <h4 style="margin-top:12px">Nach Anforderung</h4>
+          <a href="#">Neubau</a>
+          <a href="#">Sanierung</a>
+          <a href="#">Schnelle Nutzung</a>
+        </div>
+      </li>
+      <li>
+        <a href="#zielgruppen">Für Planer</a>
+        <div class="mega-menu">
+          <h4>Planungshilfen</h4>
+          <a href="#">Ausschreibungstexte (LV)</a>
+          <a href="#">GAEB-Downloads</a>
+          <a href="#">Normen & Zulassungen</a>
+          <a href="#">Systemaufbauten</a>
+          <h4 style="margin-top:12px">Service</h4>
+          <a href="#">Objektberatung</a>
+          <a href="#">Planerhotline</a>
+          <a href="#">Bemusterung</a>
+        </div>
+      </li>
+      <li>
+        <a href="#">Service & Downloads</a>
+        <div class="mega-menu">
+          <h4>Downloads</h4>
+          <a href="#">Technische Datenblätter</a>
+          <a href="#">Sicherheitsdatenblätter</a>
+          <a href="#">Leistungserklärungen</a>
+          <h4 style="margin-top:12px">Tools</h4>
+          <a href="#">Verbrauchsrechner</a>
+          <a href="#">Händlerfinder</a>
+          <a href="#">FAQ</a>
+        </div>
+      </li>
+      <li>
+        <a href="#referenzen">Unternehmen</a>
+        <div class="mega-menu">
+          <h4>Über uns</h4>
+          <a href="#">Geschichte</a>
+          <a href="#">Nachhaltigkeit</a>
+          <a href="#referenzen">Referenzen</a>
+          <a href="#news">News</a>
+          <a href="#">Karriere</a>
+        </div>
+      </li>
+      <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
+
+    <div class="header-utils">
+      <button class="search-btn" aria-label="Suche">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <div class="lang-switch">
+        <select aria-label="Sprache wählen">
+          <option value="de" selected>DE</option>
+          <option value="en">EN</option>
+          <option value="fr">FR</option>
+        </select>
+      </div>
+      <a href="tel:+4996214759-0" class="header-phone">+49 9621 4759-0</a>
+    </div>
+
+    <button class="hamburger" aria-label="Menü öffnen" id="hamburgerBtn">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile Nav -->
+<nav class="mobile-nav" id="mobileNav">
+  <a href="#produkte" class="mobile-nav-link">Produkte</a>
+  <a href="#" class="mobile-nav-link">Anwendungen</a>
+  <a href="#zielgruppen" class="mobile-nav-link">Für Planer</a>
+  <a href="#" class="mobile-nav-link">Service & Downloads</a>
+  <a href="#referenzen" class="mobile-nav-link">Unternehmen</a>
+  <a href="#kontakt" class="mobile-nav-link">Kontakt</a>
+  <div class="mobile-nav-utils">
+    <a href="tel:+4996214759-0" class="btn btn-primary" style="text-align:center">+49 9621 4759-0 anrufen</a>
+    <select style="padding:10px;border-radius:var(--radius);border:1px solid var(--mid-gray);font-family:inherit;font-weight:700">
+      <option value="de" selected>Deutsch (DE)</option>
+      <option value="en">English (EN)</option>
+      <option value="fr">Français (FR)</option>
+    </select>
+  </div>
+</nav>
+
+<!-- ==================== HERO ==================== -->
+<section class="hero" id="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <h1>Mineralische Industrieböden & Hartstoffe</h1>
+      <p class="hero-sub">Qualität für Generationen, seit 1936. Für Planer, Verarbeiter und den Fachhandel.</p>
+      <div class="hero-ctas">
+        <a href="#produkte" class="btn btn-primary">Produkte entdecken</a>
+        <a href="#kontakt" class="btn btn-ghost">Beratung anfragen</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== ZIELGRUPPEN ==================== -->
+<section class="section section-gray" id="zielgruppen">
+  <div class="container">
+    <div class="zielgruppen-grid">
+      <div class="zg-card">
+        <div class="zg-icon">&#x1F4D0;</div>
+        <h3>Für Planer & Architekten</h3>
+        <ul>
+          <li>Ausschreibungstexte (GAEB)</li>
+          <li>Technische Datenblätter</li>
+          <li>Normenkonformität (DIN, EPD)</li>
+        </ul>
+        <a href="#" class="zg-link">Zum Planerbereich &rarr;</a>
+      </div>
+      <div class="zg-card">
+        <div class="zg-icon">&#x1F527;</div>
+        <h3>Für Verarbeiter</h3>
+        <ul>
+          <li>Verarbeitungshinweise & Videos</li>
+          <li>Verbrauchsrechner</li>
+          <li>Technischer Support</li>
+        </ul>
+        <a href="#" class="zg-link">Zu den Verarbeitungsinfos &rarr;</a>
+      </div>
+      <div class="zg-card">
+        <div class="zg-icon">&#x1F3EA;</div>
+        <h3>Für Handel & Distributoren</h3>
+        <ul>
+          <li>Händlerfinder</li>
+          <li>Lieferprogramm</li>
+          <li>Anfrage & Konditionen</li>
+        </ul>
+        <a href="#" class="zg-link">Zum Händlerbereich &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== PRODUKTBEREICHE ==================== -->
+<section class="section" id="produkte">
+  <div class="container">
+    <div class="section-title">
+      <h2>Unsere Produktbereiche</h2>
+      <p>Von hochbelastbaren Industrieböden bis zu innovativen Spezialbaustoffen. Lösungen für jede Anforderung.</p>
+    </div>
+    <div class="produkt-grid">
+      <a href="#" class="produkt-card">
+        <div class="produkt-img produkt-img-1">Industrieboden</div>
+        <div class="produkt-body">
+          <h3>Industrieboden</h3>
+          <p>Hartstoffe & Estriche für höchste Belastung</p>
+          <span class="produkt-link">Mehr erfahren &rarr;</span>
+        </div>
+      </a>
+      <a href="#" class="produkt-card">
+        <div class="produkt-img produkt-img-2">Sichtestrich</div>
+        <div class="produkt-body">
+          <h3>Sichtestrich</h3>
+          <p>Ästhetische Bodenlösungen mit Charakter</p>
+          <span class="produkt-link">Mehr erfahren &rarr;</span>
+        </div>
+      </a>
+      <a href="#" class="produkt-card">
+        <div class="produkt-img produkt-img-3">MICROTOP</div>
+        <div class="produkt-body">
+          <h3>MICROTOP</h3>
+          <p>Dünnschichtsysteme für Trinkwasser & mehr</p>
+          <span class="produkt-link">Mehr erfahren &rarr;</span>
+        </div>
+      </a>
+      <a href="#" class="produkt-card">
+        <div class="produkt-img produkt-img-4">Rapid Set</div>
+        <div class="produkt-body">
+          <h3>Rapid Set</h3>
+          <p>Schnellreparatur in Rekordzeit</p>
+          <span class="produkt-link">Mehr erfahren &rarr;</span>
+        </div>
+      </a>
+      <a href="#" class="produkt-card">
+        <div class="produkt-img produkt-img-5">Schnellbeton</div>
+        <div class="produkt-body">
+          <h3>Schnellbetonsysteme</h3>
+          <p>Hochfeste Betone für Sondereinsätze</p>
+          <span class="produkt-link">Mehr erfahren &rarr;</span>
+        </div>
+      </a>
+      <a href="#" class="produkt-card">
+        <div class="produkt-img produkt-img-6">Spezialbaustoffe</div>
+        <div class="produkt-body">
+          <h3>Spezialbaustoffe</h3>
+          <p>Spezialputze, Mörtel & Vergussmassen</p>
+          <span class="produkt-link">Mehr erfahren &rarr;</span>
+        </div>
+      </a>
+      <a href="#" class="produkt-card">
+        <div class="produkt-img produkt-img-7">3D Printing</div>
+        <div class="produkt-body">
+          <h3>3D Concrete Printing</h3>
+          <p>Additive Fertigung mit Zement</p>
+          <span class="produkt-link">Mehr erfahren &rarr;</span>
+        </div>
+      </a>
+      <a href="#" class="produkt-card">
+        <div class="produkt-img produkt-img-8">Katzenstreu</div>
+        <div class="produkt-body">
+          <h3>Katzenstreu</h3>
+          <p>Natürliches Streu aus Naturmineral</p>
+          <span class="produkt-link">Mehr erfahren &rarr;</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== USP / TRUST BAR ==================== -->
+<section class="section section-dark" id="usp">
+  <div class="container">
+    <div class="usp-grid">
+      <div class="usp-item">
+        <div class="usp-number">750 Mio. m&sup2;</div>
+        <div class="usp-label">verlegt weltweit</div>
+      </div>
+      <div class="usp-item">
+        <div class="usp-number">Seit 1936</div>
+        <div class="usp-label">Tradition & Erfahrung</div>
+      </div>
+      <div class="usp-item">
+        <div class="usp-number">ISO 9001</div>
+        <div class="usp-label">Zertifizierte Qualität</div>
+      </div>
+      <div class="usp-item">
+        <div class="usp-number">4 Standorte</div>
+        <div class="usp-label">Produktion in Deutschland</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== REFERENZEN ==================== -->
+<section class="section section-gray" id="referenzen">
+  <div class="container">
+    <div class="section-title">
+      <h2>Ausgewählte Referenzen</h2>
+      <p>Unsere Böden tragen die Lasten von Logistik, Automobil und Lebensmittelproduktion.</p>
+    </div>
+    <div class="referenz-grid">
+      <a href="#" class="referenz-card">
+        <div class="referenz-bg ref-bg-1"></div>
+        <div class="referenz-overlay">
+          <h3>Amazon Logistikzentrum</h3>
+          <div class="referenz-meta">Logistik &middot; Dortmund</div>
+        </div>
+      </a>
+      <a href="#" class="referenz-card">
+        <div class="referenz-bg ref-bg-2"></div>
+        <div class="referenz-overlay">
+          <h3>BMW Werk</h3>
+          <div class="referenz-meta">Automotive &middot; Leipzig</div>
+        </div>
+      </a>
+      <a href="#" class="referenz-card">
+        <div class="referenz-bg ref-bg-3"></div>
+        <div class="referenz-overlay">
+          <h3>Edeka Zentrallager</h3>
+          <div class="referenz-meta">Lebensmittel &middot; Hamm</div>
+        </div>
+      </a>
+    </div>
+    <div class="referenz-cta">
+      <a href="#" class="btn btn-primary">Alle Referenzen ansehen &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== NEWS ==================== -->
+<section class="section" id="news">
+  <div class="container">
+    <div class="section-title">
+      <h2>Aktuelles</h2>
+    </div>
+    <div class="news-grid">
+      <div class="news-card">
+        <div class="news-date">15. Januar 2027</div>
+        <h3>KORODUR auf der BAU 2027</h3>
+        <p>Besuchen Sie uns auf der Weltleitmesse für Architektur, Materialien und Systeme in München.</p>
+        <a href="#" class="news-link">Weiterlesen &rarr;</a>
+      </div>
+      <div class="news-card">
+        <div class="news-date">08. Dezember 2026</div>
+        <h3>Neue EPD für NEODUR HE 3</h3>
+        <p>Die Umwelt-Produktdeklaration für unseren meistverlegten Hartstoff ist ab sofort verfügbar.</p>
+        <a href="#" class="news-link">Weiterlesen &rarr;</a>
+      </div>
+      <div class="news-card">
+        <div class="news-date">22. November 2026</div>
+        <h3>Praxisbericht: Logistikhalle Münster</h3>
+        <p>12.000 m² KORODUR Hartstoffestrich in nur 8 Tagen. Ein Projektbericht mit dem Verarbeiter.</p>
+        <a href="#" class="news-link">Weiterlesen &rarr;</a>
+      </div>
+    </div>
+    <div class="news-cta">
+      <a href="#" class="btn btn-ghost">Alle News &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== KONTAKT CTA ==================== -->
+<section class="section section-gray" id="kontakt">
+  <div class="container kontakt-cta">
+    <h2>Sie haben ein Projekt? Wir beraten Sie gerne.</h2>
+    <div class="kontakt-cta-buttons">
+      <a href="#" class="btn btn-primary">Kontakt aufnehmen</a>
+      <a href="#" class="btn btn-ghost">Objektberatung</a>
+      <a href="tel:+4996214759-0" class="btn btn-ghost">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="vertical-align:middle;margin-right:6px"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        +49 9621 4759-0
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Produkte</h4>
+        <a href="#">Industrieboden</a>
+        <a href="#">Sichtestrich</a>
+        <a href="#">MICROTOP</a>
+        <a href="#">Rapid Set</a>
+        <a href="#">Schnellbetonsysteme</a>
+        <a href="#">Spezialbaustoffe</a>
+        <a href="#">3D Concrete Printing</a>
+        <a href="#">Katzenstreu</a>
+      </div>
+      <div class="footer-col">
+        <h4>Service</h4>
+        <a href="#">Download-Center</a>
+        <a href="#">Händlerfinder</a>
+        <a href="#">Verbrauchsrechner</a>
+        <a href="#">FAQ</a>
+        <a href="#">Schulungen</a>
+      </div>
+      <div class="footer-col">
+        <h4>Unternehmen</h4>
+        <a href="#">Geschichte</a>
+        <a href="#">Nachhaltigkeit</a>
+        <a href="#">Referenzen</a>
+        <a href="#">News</a>
+        <a href="#">Karriere</a>
+      </div>
+      <div class="footer-col">
+        <h4>Kontakt</h4>
+        <a href="tel:+4996214759-0">Tel: +49 9621 4759-0</a>
+        <a href="mailto:info@korodur.de">E-Mail: info@korodur.de</a>
+        <a href="#">Standorte</a>
+        <a href="#">Kontaktformular</a>
+      </div>
+    </div>
+
+    <div class="newsletter-row">
+      <form class="newsletter-form" onsubmit="event.preventDefault();">
+        <input type="email" placeholder="E-Mail für Newsletter" aria-label="E-Mail-Adresse für Newsletter">
+        <button type="submit">Anmelden</button>
+      </form>
+      <div class="social-links">
+        <a href="#" aria-label="LinkedIn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="#" aria-label="YouTube">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; 2026 KORODUR International GmbH. Alle Rechte vorbehalten.</span>
+      <span class="iso-badge">ISO 9001:2015</span>
+      <div class="footer-bottom-links">
+        <a href="#">Impressum</a>
+        <a href="#">Datenschutz</a>
+        <a href="#">AGB</a>
+        <a href="#">Hinweisgebersystem</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ==================== MOBILE STICKY CTA ==================== -->
+<div class="mobile-cta-bar">
+  <div class="mobile-cta-bar-inner">
+    <a href="tel:+4996214759-0" class="mobile-cta-btn">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      Anrufen
+    </a>
+    <a href="#kontakt" class="mobile-cta-btn">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      Anfragen
+    </a>
+    <a href="#" class="mobile-cta-btn">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Downloads
+    </a>
+  </div>
+</div>
+
+<script>
+// ========== HAMBURGER MENU ==========
+const hamburger = document.getElementById('hamburgerBtn');
+const mobileNav = document.getElementById('mobileNav');
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  mobileNav.classList.toggle('active');
+  document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
+});
+
+// Close mobile nav on link click
+mobileNav.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    hamburger.classList.remove('active');
+    mobileNav.classList.remove('active');
+    document.body.style.overflow = '';
+  });
+});
+
+// ========== SCROLL ANIMATIONS ==========
+const animateCards = () => {
+  const cards = document.querySelectorAll('.zg-card, .produkt-card, .referenz-card, .news-card');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        // Stagger animation
+        const idx = Array.from(entry.target.parentElement.children).indexOf(entry.target);
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, idx * 80);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  cards.forEach(card => observer.observe(card));
+};
+
+// Init on load — if user prefers reduced motion, make all visible immediately
+if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  document.querySelectorAll('.zg-card, .produkt-card, .referenz-card, .news-card').forEach(c => c.classList.add('visible'));
+} else {
+  animateCards();
+}
+
+// ========== SMOOTH SCROLL FOR ANCHOR LINKS ==========
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      const headerH = document.querySelector('.site-header').offsetHeight;
+      const top = target.getBoundingClientRect().top + window.pageYOffset - headerH;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
+  });
+});
+
+// ========== HEADER SHADOW ON SCROLL ==========
+const header = document.querySelector('.site-header');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 10) {
+    header.style.boxShadow = '0 2px 12px rgba(0,45,89,.08)';
+  } else {
+    header.style.boxShadow = 'none';
+  }
+}, { passive: true });
+</script>
+
+</body>
+</html>
